@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OhNoDistrollo - Contact Us</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/script.js"></script>
+</head>
+
+<body>
+  <nav>
+    <img src="../images/OND-logo.png" alt="OhNoDistrollo Logo" id="logo">
+    <ul class="nav__main">
+      <li><a href="../html/home.html">Home</a></li>
+      <li><a href="../html/archive.html">Archive</a></li>
+      <li><a href="../html/about.html">About Us</a></li>
+      <li><a href="../html/contact.html">Contact Us</a></li>
+      <li><a href="../html/linkreference.html">Link Reference</a></li>
+    </ul>
+    <ul class="nav__mobile">
+      <a href="../html/home.html">
+        <li>Home</li>
+      </a>
+      <a href="../html/archive.html">
+        <li>Archive</li>
+      </a>
+      <a href="../html/about.html">
+        <li>About Us</li>
+      </a>
+      <a href="../html/contact.html">
+        <li>Contact Us</li>
+      </a>
+      <a href="../html/linkreference.html">
+        <li>Link Reference</li>
+      </a>
+    </ul>
+    <div class="nav__icon" onclick="toggleMobileMenu()">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </nav>
+
+  <header style="background-image: url(../images/ella-don-0m8Vgpd9oQk-unsplash.jpg);">
+    <h1>Contact Us</h1>
+  </header>
+
+  <main>
+    <form id="contact-form" action="" method="get">
+      <label for="name">Your name</label>
+      <input type="text" id="name" size="40">
+      <label for="email">Your email</label>
+      <input type="text" id="email" size="40">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" size="40">
+      <label for="message">Your message (optional)</label>
+      <textarea name="" id="message" cols="40" rows="10"></textarea>
+      <input id="form-submit" type="submit" value="Submit">
+    </form>
+  </main>
+
+  <footer>
+    &copy; OhNoDistrollo
+  </footer>
+</body>
+
+</html>

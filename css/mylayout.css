@@ -1,0 +1,69 @@
+/*
+Abraham Benski
+2024-04-15
+
+This is the styling for mylayout.
+
+Filename: benskiabraham_mylayout.css
+*/
+
+/* Root Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav, header, footer {
+  width: 100vw;
+}
+
+nav, header, footer, article {
+  border: black solid 2px;
+  padding: 1.5em;
+  text-align: center;
+}
+
+/* Body Styles */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Nav Styles */
+
+/* Header Styles */
+
+header {
+  flex: 1 1 15vh;
+}
+
+/* Article Styles */
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 5 5 60vh;
+}
+
+article {
+  flex: 5 5 150px;
+  width: 600px;
+  margin: 1em;
+}
+
+/* Footer Styles */
+
+/* Mobile Styles */
+
+@media screen and (max-width: 600px) {
+  header {
+    flex: 0 0 0;
+  }
+
+  article {
+    width: 100vw;
+  }
+}

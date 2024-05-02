@@ -1,0 +1,422 @@
+/*
+Abraham Benski
+2024-04-15
+
+This is the primary styling document for the OhNoDistrollo website.
+
+Filename: benskiabraham_styles.css
+*/
+
+/* Font Imports */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+/* Custom Colors */
+
+:root {
+  --black: #0f0f0f;
+  --white: #f0f0f0;
+  --purpledark: #210c27;
+  --purplelight: #451952;
+  --pinkdark: #662549;
+  --pinklight: #ae445a;
+  --yellow: #f39f5a;
+}
+
+/* Root Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav, header, footer {
+  width: 100%;
+}
+
+nav, footer {
+  box-shadow: black 0 0 12px;
+}
+
+/* Font Styles */
+
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--white);
+  line-height: 1.2rem;
+}
+
+h1, h2, h3, a {
+  font-family: Montserrat;
+  font-weight: bold;
+}
+
+h1, h2, h3, a, p {
+  z-index: 50;
+}
+
+/* Button Styles */
+
+button {
+  border: var(--pinklight) outset 2px;
+  border-radius: 12px;
+  background-color: var(--pinkdark);
+  color: var(--yellow);
+  padding: 0.5em 1.5em;
+}
+
+button:active {
+  border: var(--pinklight) inset 2px;
+}
+
+/* Body Styles */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--purplelight);
+  box-shadow: inset black 0 0 4em;
+}
+/* Main Styles */
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 5 5 75vh;
+  padding-bottom: 60px;
+}
+
+/* Nav Styles */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 0 1em;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.nav__mobile {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: var(--black);
+}
+
+.nav__mobile li {
+  border-collapse: collapse;
+  border: var(--black) inset 1px;
+  border-width: 1px 0 1px 0;
+  padding: 1em 4em;
+  transition: background-color 1.2s;
+}
+
+.nav__mobile li:hover {
+  background-color: var(--purpledark);
+  transition: background-color 0.2s;
+}
+
+.nav__main li {
+  display: inline;
+  margin: 0 0.5em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--yellow);
+  transition: color 1.2s;
+}
+
+a:hover, a:active {
+  color: var(--white);
+  transition: color 0.2s;
+}
+
+#logo {
+  margin: 2px 0;
+  width: 50px;
+}
+
+.nav__icon {
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--yellow);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.active .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.active .bar2 {
+  opacity: 0;
+}
+
+.active .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* Header Styles */
+
+header {
+  flex: 0 0 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--purpledark);
+  background: center / cover no-repeat;
+  padding-top: 60px;
+  box-shadow: black 0 0 4px;
+}
+
+header * {
+  margin-bottom: 1em;
+}
+
+header h1 {
+  text-shadow: var(--purpledark) 0px 0px 4px;
+}
+
+/* Archive Styles */
+
+.post-archive {
+  column-count: 4;
+  column-width: 250px;
+  margin: 1em;
+}
+
+.post-archive p {
+  box-shadow: var(--yellow) 0 0 4px;
+  background-color: var(--purpledark);
+  line-height: 2em;
+  padding: 0.4em 1.2em;
+}
+
+/* Card Styles */
+
+main .card {
+  text-decoration: none;
+  color: var(--white);
+  text-shadow: var(--black) 0px 0px 8px;
+  margin: 1em;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: black 0 0 8px;
+  transition: box-shadow 1.2s;
+}
+
+main .card:hover {
+  box-shadow: black 0 0 20px;
+  transition: box-shadow 0.2s;
+}
+
+a.card article {
+  background-color: var(--purpledark);
+  background: center / cover no-repeat;
+  width: 600px;
+  min-height: 200px;
+  padding: 1em;
+  border-radius: 12px;
+  border: var(--pinkdark) solid 2px;
+  box-shadow: inset black 0 0 600px;
+  transition: box-shadow 1.2s, border 1.2s;
+}
+
+a.card article:hover {
+  box-shadow: inset black 0 0 100px;
+  border: var(--pinklight) solid 2px;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+a.card article h2 {
+  line-height: 1em;
+  margin-bottom: 0.6em;
+}
+
+a.card p {
+  font-weight: normal;
+}
+
+/* Passage Styles */
+
+article.passage {
+  background-color: var(--purpledark);
+  box-shadow: black 0 0 8px;
+  border-radius: 12px;
+  border: var(--pinkdark) solid 2px;
+  line-height: 1.5em;
+  margin: 1em;
+  padding: 1em;
+  max-width: 600px;
+}
+
+article.passage * {
+ margin-bottom: 1em; 
+}
+
+/* Table Styles */
+
+table {
+  margin: 1em;
+}
+
+caption {
+  margin-bottom: 0.4em;
+}
+
+tr {
+  box-shadow: var(--yellow) 0 0 4px;
+}
+
+th {
+  background-color: var(--black);
+}
+
+th, td {
+  line-height: 2em;
+  padding: 0.4em 2em;
+}
+
+col#modCol {
+  background-color: var(--purpledark);
+  min-width: 270px;
+}
+
+col#exampleCol {
+  background-color: var(--purpledark);
+}
+
+/* Form Styles */
+
+form#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+form#contact-form label {
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+}
+
+form#contact-form input, form#contact-form textarea {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  padding: 0.2em 1em;
+}
+
+form#contact-form #form-submit {
+  margin-top: 1em;
+  width: fit-content;
+}
+
+/* Video Styles */
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* Footer Styles */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+}
+
+/* Mobile Styles */
+
+@media screen and (max-width: 600px) {
+  nav, footer {
+    position: static;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  header {
+    flex: 0;
+    padding-top: 1.0em;
+  }
+
+  header p, header button, header a {
+    display: none;
+  }
+
+  header h1 {
+    margin-bottom: 0.5em;
+  }
+
+  main {
+    flex: 0;
+  }
+
+  a.card article {
+    width: 90vw;
+  }
+
+  .nav__icon {
+    display: inline-block;
+  }
+
+  .nav__main {
+    display: none;
+  }
+
+  a {
+    font-size: 1.2em;
+  }
+
+  main .post-archive {
+    column-count: 1;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    background-color: var(--purpledark);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.4em;
+  }
+
+  col#modCol {
+    background-color: var(--purplelight);
+  }
+
+  form#contact-form {
+    width: auto;
+  }
+}
