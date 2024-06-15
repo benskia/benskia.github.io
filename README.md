@@ -2,4 +2,4 @@
 
 This is mock site made for educational purposes.
 
-Feel free to view it at [OhNoDistrollo.com](https://ohnodistrollo.com)
+Feel free to view it at [benskia.github.io](https://benskia.github.io)
